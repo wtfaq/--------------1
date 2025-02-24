@@ -1,11 +1,13 @@
 const VK = require('node-vk-bot-api');
 
 // Создаем экземпляр VK с токеном
-const bot = new VK("vk1.a.9mc4Z45ccjueovmwbliyTmMKZ6hF9JX7ROzvy5X6ignhmeU2knIdhMvKJ9f0zqPn4iEnUh3xAkoXA-CBGWHh0EBlIum-r6HNqk_4IgRD85HGIzXMIGN5SJ0EchNa_h1re6P6EhXZ2L0rVP64JWQNxRh9iOkPTtuhhgISz89Loi1Z3OdbepE2t22sTVbE0y2HKNLphGBh3hCaoACwQ9apYQ");
+const token = "vk1.a.9mc4Z45ccjueovmwbliyTmMKZ6hF9JX7ROzvy5X6ignhmeU2knIdhMvKJ9f0zqPn4iEnUh3xAkoXA-CBGWHh0EBlIum-r6HNqk_4IgRD85HGIzXMIGN5SJ0EchNa_h1re6P6EhXZ2L0rVP64JWQNxRh9iOkPTtuhhgISz89Loi1Z3OdbepE2t22sTVbE0y2HKNLphGBh3hCaoACwQ9apYQ";
+const bot = new VK(process.env.token);
 
 const userInfo = {}; // Информация пользователей
 
 bot.on((ctx) => {
+    console.log(ctx);
     const userId = ctx.message.from_id;
     console.log('Входное сообщение прочитано')
 
